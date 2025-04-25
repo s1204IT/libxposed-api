@@ -1,13 +1,13 @@
 plugins {
     alias(libs.plugins.agp.lib)
-    `maven-publish`
-    signing
+    id("maven-publish")
+    id("signing")
 }
 
 android {
     namespace = "io.github.libxposed.api"
     compileSdk = 35
-    buildToolsVersion = "35.0.0"
+    buildToolsVersion = "35.0.1"
 
     defaultConfig {
         minSdk = 24
@@ -20,8 +20,8 @@ android {
     }
 
     compileOptions {
-        targetCompatibility = JavaVersion.VERSION_1_8
-        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_21
     }
 
     publishing {
